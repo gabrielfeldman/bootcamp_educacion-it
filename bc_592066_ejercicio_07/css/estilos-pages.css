@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(69, 78, 247); 
+
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--primary-color);
+    max-width: 90%;
+    padding: 1em;
+    margin-inline: auto;
+    line-height: 1.3;
+
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+}
+
+img {
+    width: 100%;
+}
+
+h1, 
+h2 {
+    font-family: 'Bungee', Arial, Helvetica, sans-serif;
+}
+
+h3,
+h4, 
+h5,
+h6 {
+    font-weight: 900;
+}
+
+
+.header,
+.footer,
+.main__article {
+    background-color: var(--primary-color);
+    color: #e5e5f7 ;
+    border-radius: 25px 0;
+}
+
+.header,
+.footer,
+.main > h2 {
+    text-align: center;
+}
+
+.header, 
+.main,
+.main>*,
+.footer {
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+.title,
+.main > h2 {
+    letter-spacing: .5em;
+}
+
+.title {
+    text-shadow: 
+    0.025em 0.025em 0 #222,
+    0.05em 0.05em 0 #00f,
+    0.075em 0.075em 0 #f00,
+    0.1em 0.1em 0 #ffea00;
+}
+
+.main > h2 {
+    margin: auto;
+    padding: auto;
+    font-size: 1.75rem;
+    text-shadow: 
+    0.025em 0.025em 0 #ffea00,
+    0.05em 0.05em 0 #00a6ff,
+    0.075em 0.075em 0 #f00,
+    0.1em 0.1em 0 #8a2be2;
+}
+
+.article__title {
+    font-size: 1.3rem;
+    border-bottom: 2px dotted #e5e5f7;
+    text-align: right;
+}
+
+
+.article__img__container {
+    display: flex;
+    justify-content: center;
+}
+
+.article__img__container > img {
+   width: 80%;
+   max-width: 300px;
+}
+
+.main__article p:first-of-type {
+    font-weight: 700;
+}
+
+.article__button {
+    display: block;
+    width: 150px;
+    padding: 16px 32px;
+    text-align: center;
+    margin-inline: auto;
+    font-weight: 700;
+    text-decoration: none;
+    background-image: linear-gradient(to top right, #B066FE, #63E2FF);
+    color: #f1f1f1;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    transition: transform ease .5s, opacity ease .3s;
+}
+
+.article__button:hover {
+    transform:scale(1.05) translateY(-3px);
+    opacity: .8;
+}
+
+.article__button:active {
+    transform: translateY(3px);
+    opacity: 1;
+}
+
+.footer {
+    font-weight: 700;
+}
+
+
+/*=============================
+Estilos para las páginas creadas
+================================*/
+
+.product {
+    border-radius: 8px;
+ }
+ 
+ .product-container {
+     display: grid;
+     grid-template-columns: 40% 1fr;
+     grid-gap: 16px;
+ 
+ }
+ 
+ .raiting-price {
+     list-style: none;
+     margin-top: 8px;
+     padding-left: 0;
+ }
+ 
+ .raiting-price>* {
+     padding: 2px 1px;
+     margin-bottom: 2px;
+ }
+ 
+ .checked {
+     color: #ffbf00;
+   }
+ 
+ .opinions {
+     color: #e5e5f7;
+ }
+ 
+ .price {
+     font-size: 2rem;
+ }
+ 
+ .button--big {
+     width: 200px;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .home-button {
+     max-width: 120px;
+     margin-inline: auto;
+     display: flex;
+     justify-content: center;
+     color: #f1f1f1;
+     border: 2px solid #e5e5f7;
+     border-radius: 8px;
+     padding: 1em;
+     text-decoration: none;
+     font-weight: 700;
+     transition: transform ease-in-out .5s, 
+     background-color ease-in-out .3s, 
+     color ease-in-out .3s;
+     opacity: ease .3;
+ }
+
+ .home-button:hover {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+    transform:scale(1.05) translateY(-3px);
+}
+
+.home-button:active {
+    transform: translateY(3px);
+    opacity: .9;
+}
+
+
+
+@media (min-width: 750px) {  
+    
+    .product {
+        width: 30%;
+    }
+    
+    .product-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
+            
+        }
+         
+    }
+
+@media (min-width: 900px) {
+   
+    .title,
+    .main > h2 {
+    font-size: 2.5rem;
+    }
+    
+}
