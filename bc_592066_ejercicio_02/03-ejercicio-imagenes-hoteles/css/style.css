@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #86acd9;
+}
+
+h1,
+h2 {
+    color: #bb5397;
+    font-weight: lighter;
+    letter-spacing: 4px;
+}
+
+.header {    
+    text-align: center;
+    margin-block-end: 3em;
+}
+
+.title {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    margin-top: 0;
+}
+
+.logo {
+    max-width: 40%;
+}
+
+section img {
+    max-width: 40%;
+}
+
+/*================================================
+Clases utilitarias posicionamiento de las imágenes
+===============================================*/
+
+.float-left {
+    float: left;
+    margin-right: .5rem;
+}
+
+.float-right {
+    float: right;
+    margin-left: .5rem;
+}
+
+.img-width-100 {
+    width: 100%;
+}

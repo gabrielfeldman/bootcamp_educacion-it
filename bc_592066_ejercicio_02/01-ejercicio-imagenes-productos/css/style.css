@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    background-color: #273238;
+    color: #bbc9cc;
+    text-align: justify;
+}
+
+/*Titulo principal*/
+
+.title {
+    font-family: Impact, 'Charcoal', sans-serif;
+    font-size: 4rem;
+    background-color: #fff;
+    color: #698593;
+    text-align: center;
+}
+
+/*Titulo de cada sección*/
+
+.section-title {
+    font-family: 'Libre Franklin', Arial, 'Gadget', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+img {
+    border: 8px solid;
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+    outline-offset: -8px; 
+} 
+
+
+/*Clases utilitarias para asignar colores de texto y borde*/
+
+.color-salmon {
+    color: #e6cbbf;
+}
+
+.boder-clr-salmon {
+    border-color: #e6cbbf;
+}
+
+.color-light-blue {
+    color:#9fbfca; 
+}
+
+.border-clr-light-blue {
+    border-color: #9fbfca;
+}
+
+.color-grey-blue {
+    color: #babbbe; 
+}
+
+.border-clr-grey-blue {
+    border-color: #babbbe;
+}
+
+.color-grey {
+   color: #8d94a1;
+}
+
+.border-clr-grey {
+    border-color: #8d94a1;
+}
+
+.color-light-grey {
+   color: #b2b2aa
+}
+
+.border-clr-light-grey {
+    border-color: #b2b2aa;
+}
