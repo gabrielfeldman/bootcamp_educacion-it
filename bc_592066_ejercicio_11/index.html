@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link id="styleSheet" rel="stylesheet" href="css/estilos.css"> 
+    <title>Afiliación - Gabriel Feldman</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Vení al GYM</h1>
+        <nav class="header__nav">
+            <button class="header__nav__btn btn--gradient" id="styleBtn">Cambio CSS próximo</button>
+            <button class="header__nav__btn btn--solid" id="shuffleBtn">CSS shuffle <i class="fa fa-refresh"></i></button>
+            <select class="header__nav__select" name="styleSelect" id="styleSelect">
+                <option value="default">Estilo principal</option>
+                <option value="retro">Estilo retro</option>
+                <option value="urban">Estilo urbano</option>
+                <option value="rmCss">Sin estilo</option>
+            </select>
+            <fieldset class="header__nav__fieldset">
+                <div>
+                  <input type="radio" id="defaultStyleRadio" name="styleRadio" value="default"
+                         checked>
+                  <label for="defaultStyleRadio">Principal</label>
+                </div>
+                <div>
+                  <input type="radio" id="retroStyleRadio" name="styleRadio" value="retro">
+                  <label for="retroStyleRadio">Retro</label>
+                </div>
+                <div>
+                  <input type="radio" id="urbanStyleRadio" name="styleRadio" value="urban">
+                  <label for="urbanStyleRadio">Urbano</label>
+                </div>
+            </fieldset>
+        </nav>
+    </header>
+    <main class="main">
+        <form class="form" action="POST">
+            <fieldset class="form__fieldset">
+                <legend class="form__fieldset__legend legend--personal-data"> Datos personales</legend>
+                <div class="form__fieldset__input-container">
+                <label class="form__fieldset__label label--required" for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form__fieldset__input-container">
+                <label class="form__fieldset__label label--required" for="sname">Apellido:</label>
+                    <input type="text" name="sname" id="sname" required>
+                </div>
+                <div class="form__fieldset__input-container">
+                    <label class="form__fieldset__label label--required" for="id-number">Documento:</label>
+                        <input type="text" name="id-number" id="id-number" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" required>
+                </div>
+                <div class="form__fieldset__input-container">
+                <label class="form__fieldset__label label--required" for="country">Nacionalidad:</label>
+                    <select name="country" id="country" required>
+                        <option value="">- Selectionar -</option>
+                        <option value="arg">Argentina</option>
+                        <option value="br">Brasileña</option>
+                        <option value="uru">Uruguaya</option>
+                        <option value="other">Otra</option>
+                    </select>
+                </div>
+                <div class="form__fieldset__input-container">
+                <label class="form__fieldset__label" for="message">Contanos un poco de vos...  </label>
+                    <textarea name="message" id="message" rows="5">
+                    </textarea>
+                </div>    
+                <div class="form__fieldset__gender-container"><p class="fieldset__p-label form__fieldset__label label--required">Sexo:</p>
+                    <label for="woman">
+                        <input type="radio" name="gender" id="woman" value="woman" checked required>
+                        Femenino
+                    </label>
+                    <label for="man">
+                        <input type="radio" name="gender" id="man" value="man" required>
+                        Masculino
+                    </label>
+                    <label for="nonBinary">
+                        <input type="radio" name="gender" id="nonBinary" value="nonBinary" required>
+                        Otro
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__fieldset__legend legend--contact"> Datos de contacto</legend>
+                <div class="form__fieldset__input-container">
+                <label class="form__fieldset__label" for="phone">Teléfono:  </label>
+                <input type="tel" name="phone" id="phone" placeholder="Código de área y número">
+                </div>
+                <div class="form__fieldset__input-container">
+                <label class="form__fieldset__label label--required" for="mail">Dirección de correo electrónico:</label>
+                    <input type="email" name="mail" id="mail" placeholder="Ej: mail@gmail.com" required>
+                </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__fieldset__legend legend--activities"> Actividades</legend>
+                <small>Por favor, indicá cuáles actividades te interesan.</small>
+                <div class="form__fieldset__input-container--row">
+                    <p class="fieldset__p-label">Sede Palermo:</p>
+                    <label for="paBasket">
+                        <input type="checkbox" name="activitiesPalermo" id="paBasket" value="basket">
+                        Básquet
+                    </label>
+                    <label for="paBox">
+                        <input type="checkbox" name="activitiesPalermo" id="paBox" value="box">
+                        Boxeo
+                    </label>
+                    <label for="paFutbol">
+                        <input type="checkbox" name="activitiesPalermo" id="paFutbol" value="futbol">
+                        Fútbol
+                    </label>
+                    <label for="paTenis">
+                        <input type="checkbox" name="activitiesPalermo" id="paTenis" value="tenis">
+                        Tenis
+                    </label>
+                </div>
+                <div class="form__fieldset__input-container--row">
+                    <p class="fieldset__p-label">Sede Rosario:</p>
+                    <label for="roBasket">
+                        <input type="checkbox" name="activitiesRosario" id="roBasket" value="basket">
+                        Básquet
+                    </label>
+                    <label for="roFutbol">
+                        <input type="checkbox" name="activitiesRosario" id="roFutbol" value="futbol">
+                        Fútbol
+                    </label>
+                    <label for="roRugby">
+                        <input type="checkbox" name="activitiesRosario" id="roRugby" value="rugby">
+                        Rugby
+                    </label>
+                    <label for="roVoley">
+                        <input type="checkbox" name="activitiesRosario" id="roVoley" value="voley">
+                        Voley
+                    </label>
+                </div>
+            </fieldset>
+                <label class="label--required" for="conditions">
+                    <input type="checkbox" name="conditions" id="conditions" value="accept" required>
+                    Acepto las condiciones</label>
+                <label for="subscribeNews">
+                    <input type="checkbox" name="subscribeNews" id="subscribeNews" value="accept" checked>
+                    Deseo recibir novedades
+                </label>
+            <p class="disclaimer__text">*: campo obligatorio.</p>
+            <div class="form__btn__container">
+                <button class="form__btn" type="submit">Iniciar afilición</button>
+                <button class="form__btn" type="reset">Restablecer</button>
+            </div>
+
+        </form>
+    </main>
+
+<script src="js/main.js"></script> 
+</body>
+</html>

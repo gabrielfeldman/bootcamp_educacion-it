@@ -1,0 +1,343 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+  
+    --primary-clr:#a6c1b9;
+    --secondary-clr:#4d6d63;
+    --terciary-clr:#2b3d37;  
+    
+    --bg-color:#1f2023;
+    --bg-fieldset-clr: #d6e2de;
+    --txt-btn-clr: #98ad91;
+    --txt-secondary-clr: #f1f1f1;
+    --input-border-clr: rgb(138, 167, 159);
+}
+
+body {
+    font-family:'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: var(--bg-color);
+    color: #222;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.header,
+.main {
+    padding: .5em 1em;
+}
+
+.header {
+    font-family: 'Poppins', sans-serif;
+    color: var(--txt-secondary-clr);
+    text-align: center;
+    margin-top: 6em;
+    padding: 2em;
+}
+
+.header__title {
+    border: solid .5em var(--bg-color);
+    border-block-color:var(--secondary-clr);
+}
+
+form,
+.form__fieldset,
+.form__fieldset__input-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+.form__fieldset {
+    background-color: var(--bg-fieldset-clr);
+    border-color: var(--secondary-clr);
+    border-radius: 4px;
+    margin-bottom: 4em;
+    position: relative;
+}
+
+.form__fieldset:not(:last-of-type) {
+    align-items: center;
+}
+
+.form__fieldset > * {
+    margin-block: .25rem;
+}
+
+.form__fieldset__input-container--row{
+    flex-flow: row;
+}
+
+.form__fieldset__input-container {
+    width: 80%;
+}
+
+.form__fieldset__input-container > * {
+    width: 100%;
+    padding-block: .25rem;
+}
+
+
+.form__fieldset__legend {
+    background-color: var(--secondary-clr);
+    padding: .5em;
+    border-radius: 4px;
+    font-variant: small-caps;
+    color: var(--txt-secondary-clr);
+    font-weight: 700;
+}
+
+
+.form__fieldset__label,
+.form__fieldset__gender-container {
+    text-align: center;
+}
+
+.label--required::after{
+    content: ' *';
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    text-align: right; 
+}
+  
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    background: white;
+    border: 2px solid var(--input-border-clr);
+    outline-color: var(--input-border-clr);
+    border-radius: 4px;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+label[for="conditions"],
+label[for="subscribeNews"],
+.disclaimer__text {
+    color: var(--txt-secondary-clr);
+}
+
+.disclaimer__text {
+    font-weight: 500;
+}
+
+.form__btn__container {
+    width: 100%;
+    margin-block: .5em;
+    padding-block: .5em;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.form__btn {
+    padding: .75em 1.5em;
+    background-color: var(--terciary-clr);
+    color: var(--txt-btn-clr);
+    border: 1px solid var(--secondary-clr);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+/*================================ 
+
+>>    FOCUS & HOVER STYLES
+
+=================================*/
+
+.form__fieldset:focus-within {
+    background-color: var(--primary-clr);
+}
+
+.form__fieldset:focus-within > legend {
+    background-color: var(--terciary-clr);
+}
+
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+input[type="checkbox"]:focus-visible,
+.form__btn:focus-visible {
+    border: 2px solid #222;
+    outline: 2px solid var(--txt-secondary-clr);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    background-color: var(--secondary-clr);
+    color: var(--txt-secondary-clr);
+}
+
+.form__btn:hover,
+.form__btn:focus-visible {
+    background-color: var(--txt-btn-clr);
+    color: var(--terciary-clr);
+}
+
+.form__btn:active {
+    transform: scale(1.1);
+    opacity: .5;
+    transition: all 3ms ease-in-out;
+}
+
+/*============================
+
+>>         EMOJIS 
+
+==============================*/
+
+.header__title::after {
+    content: '	\01F4AA \01F3FD';
+}
+
+.legend--personal-data::before {
+    content: '\1F64B ';
+}
+
+.legend--personal-data::after {
+    content: ' \1F440';
+}
+
+.legend--contact::before {
+    content: '\1F4F1 ';
+}
+
+.legend--contact::after {
+    content: ' \1F4E7';
+}
+
+.legend--activities::before {
+    content: '\1F6B4 ';
+}
+
+.legend--activities::after {
+    content: ' \1F938';
+}
+
+
+/*===========================
+
+>>     DECORATIVE CIRCLES
+
+=============================*/
+
+fieldset:not(:last-of-type):after {
+    content: '';
+    height: 25px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(200%);
+    border-bottom: dotted 16px var(--primary-clr);
+}
+
+
+/*=========================
+
+>>  BOTONONERA CAMBIO CSS
+
+===========================*/
+
+.header__nav {
+    font-size: .75rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 16px;
+    display: grid;
+    justify-content: center;
+    gap: .5em;
+}
+
+@media screen and (min-width: 750px) {
+    .header__nav {
+       left: 50%;
+       transform: translateX(-50%);
+    }
+}
+
+.header__nav > * {
+    margin-bottom: .25em;
+}
+
+.header__nav__btn {
+    font-size: .75rem;
+    font-weight: 700;
+    padding: .5em .75rem;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: white;
+    transition: opacity ease-in-out .2s;
+}
+
+.btn--gradient {
+    background-image: linear-gradient(to top right, #B066FE, #63E2FF);
+}
+
+.btn--solid {
+    border-color: transparent;
+    background-color: #2e7d33;
+}
+
+.header__nav__select {
+    font-size: .75rem;
+    font-weight: 700;
+    padding: .5em .5rem;
+    background: #222;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    grid-column: span 2;
+}
+
+.header__nav__btn:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+
+.header__nav__btn:active,
+.header__nav__select:focus {
+    opacity: .9;
+    outline: 2px solid rgb(255, 215, 0);
+}
+
+.header__nav__select:focus-visible {
+    border: 2px solid #fff;
+    outline: 2px solid #0000ff;
+}
+
+.header__nav__fieldset {
+    border: 2px solid #fff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    grid-column: span 3;
+}
+
+.header__nav__fieldset > * {
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #fff;
+}
